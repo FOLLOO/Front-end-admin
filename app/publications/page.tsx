@@ -1,8 +1,11 @@
 // 'use client'
 import React from 'react';
 import {buttonVariants} from "@/components/ui/button";
+
 import Link from "next/link";
+
 import {Table, TableCell, TableBody, TableCaption, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+
 import {
   Pagination,
   PaginationContent, PaginationEllipsis,
@@ -68,8 +71,12 @@ export default function Page() {
 
       <div className="flex gap-4">
       <Link href={'/publications/create'} className={buttonVariants()}>
-        Добавить пост
+       Add Publication
       </Link>
+
+        <Link href={'/tags'} className={buttonVariants()}>
+          Add Tags
+        </Link>
       </div>
     </section>
   );

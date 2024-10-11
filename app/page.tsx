@@ -1,7 +1,10 @@
+'use client'
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import {Toaster} from "@/components/ui/sonner";
+import * as React from "react";
 
 export default function IndexPage() {
   return (
@@ -34,6 +37,7 @@ export default function IndexPage() {
           GitHub
         </Link>
       </div>
+      <Toaster />
     </section>
   )
 }
