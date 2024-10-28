@@ -13,7 +13,7 @@ export async function deleteTags(id: string) {
     })
   }
   try {
-    const res = await fetch(`http://192.168.0.101:5000/api/post/deleteTag/${id}`, {
+    const res = await fetch(`http://192.168.0.100:5000/api/post/deleteTag/${id}`, {
       method: 'DELETE',
     })
     if (res.status === 200) {

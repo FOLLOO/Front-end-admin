@@ -67,6 +67,12 @@
   * {
     @apply border-border;
   }
+  a, button{
+    border-radius: .5rem !important;
+  }
+  button[role=switch]{
+    border-radius: 9999999rem !important;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;

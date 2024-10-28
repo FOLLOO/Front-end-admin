@@ -7,7 +7,7 @@ import {Toaster} from "@/components/ui/sonner";
 
 export async function fetchTags() {
   try {
-    const response = await fetch(`http://192.168.0.101:5000/api/post/getTags`, {
+    const response = await fetch(`http://192.168.0.102:5000/api/post/getTags`, {
       cache: "no-store"
     })
     if (!response.ok) {
