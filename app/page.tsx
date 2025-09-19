@@ -11,31 +11,36 @@ export default function IndexPage() {
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
+          Это административная панель,<br className="hidden sm:inline" />
+          разработанная на Next.js <br className="hidden sm:inline" />   
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
+          с использованием компонентной библиотеки shadcn/ui.  
+          Панель предоставляет удобный интерфейс для управления данными и конфигурациями проекта.
         </p>
+        <p className="max-w-[700px] text-lg text-foreground">
+          Основные задачи админ-панели:  
+        </p>
+        <ul className="max-w-[700px] text-lg text-foreground">
+          <li>- управление контентом сайта (добавление, редактирование, удаление)  </li>
+          <li>- модерация пользовательских данных и комментариев  </li>
+          <li>- быстрый доступ к настройкам проекта  </li>
+          <li>- просмотр статистики и аналитики  </li>
+          <li>- визуализация данных через графики и таблицы  </li>
+        </ul>
       </div>
       <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
+        {Object.keys(siteConfig.links).map((key, index ) => (
+          <Link
+            key={key}
+            href={siteConfig.links[key as keyof typeof siteConfig.links]}
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants()}
+          >
+            {key.toUpperCase()}
+          </Link>
+        ))}
       </div>
       <Toaster />
     </section>

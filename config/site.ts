@@ -1,25 +1,25 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: " ",
+  name: "STEAM API Admin",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Это административная панель, разработанная на Next.js с использованием компонентной библиотеки shadcn/ui. Панель предоставляет удобный интерфейс для управления данными и конфигурациями проекта",
   mainNav: [
     {
       title: "Главная",
       href: "/",
     },
     {
-      title: "Посты",
-      href: "/publications",
+      title: "Словари",
+      href: "/dictionaries",
       // disabled: true
     },
     {
-      title: "Услуги",
+      title: "Сущности",
       href: "/services",
     },
     {
-      title: "Проекты",
+      title: "Другие проеткы или (Профиль)",
       href: "/cases",
     },
   ],
@@ -27,5 +27,9 @@ export const siteConfig = {
     // twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
+    server: "https://ui.shadcn.com",
+    bot: "https://ui.shadcn.com",
+    obsidian: "https://ui.shadcn.com",
+    mySQL: "https://ui.shadcn.com",
   },
 }
