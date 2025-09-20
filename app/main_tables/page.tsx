@@ -1,69 +1,69 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users,  User, Medal, TypeIcon, Library, Factory, Star, Swords } from "lucide-react"
+import { Users, Backpack, Swords, IceCream, Box, User, Sword, Sticker, DollarSign } from "lucide-react"
 
 const dictionaries = [
   {
-    title: "Степень износа",
-    description: "Степень износа предмета. Например: После полевых испытаний, Прямо с завода, Закаленное в боях, и т.д.",
-    href: "/dictionaries/degree_of_wear",
-    icon: Factory,
+    title: "Пользователи",
+    description: "Пользователи системы с различными ролями и правами доступа.",
+    href: "/dictionaries/users",
+    icon: Users,
     color: "text-blue-600 dark:text-blue-400",
   },
   {
-    title: "Коллекции",
-    description: "Коллекции предметов в игре. Например: Коллекция «Кейс Гамбит», Коллекция «Кейс Prisma 2», и т.д.",
-    href: "/dictionaries/collections",
-    icon: Library,
+    title: "Инвентари",
+    description: "Инвентари пользователей, кому что привязано.",
+    href: "/dictionaries/inventories",
+    icon: Backpack,
     color: "text-red-600 dark:text-red-400",
   },
   {
-    title: "Редкость",
-    description: "Редкость предмета. Например: Промо, Базовая, Армейская, и т.д.",
-    href: "/dictionaries/rarity",
-    icon: Star,
+    title: "Предметы в инвентаре",
+    description: "Содержание инвентарей пользователей, содержащие различные предметы и ресурсы.",
+    href: "/dictionaries/inventory_items",
+    icon: Swords,
     color: "text-purple-600 dark:text-purple-400",
   },
   {
-    title: "Тип объектов",
-    description: "Принадлежность предмета к определенному типу. Например: Оружие, Наклейка, Перчатки, и т.д.",
-    href: "/dictionaries/type_of_objects",
-    icon: TypeIcon,
+    title: "Предметы",
+    description: "Предметы, которые могут быть частью инвентарей пользователей.",
+    href: "/dictionaries/items",
+    icon: IceCream,
     color: "text-green-600 dark:text-green-400",
   },
   {
-    title: "Тип оружий",
-    description: "Тип оружия в игре. Например: Пистолет, Винтовка, Дробовик, и т.д.",
-    href: "/dictionaries/type_of_weapons",
-    icon: Swords,
+    title: "Кейсы",
+    description: "Кейсы стикер кейсы, которые существую в игре.",
+    href: "/dictionaries/containers",
+    icon: Box,
     color: "text-orange-600 dark:text-orange-400",
   },
   {
-    title: "Турниры",
-    description: "Турниры, в которых участвовали профессиональные игроки. Например: ESL One Cologne 2021, PGL Major Stockholm 2021, и т.д.",
-    href: "/dictionaries/tournaments",
-    icon: Medal,
+    title: "Агенты",
+    description: "Агенты, которые существуют в игре.",
+    href: "/dictionaries/agents",
+    icon: User,
     color: "text-pink-600 dark:text-pink-400",
   },
     {
-    title: "Тип материалов",
-    description: "Тип материалов стикеров. Например: Металл, Дерево, Пластик, и т.д.",
-    href: "/dictionaries/type_of_materials",
-    icon: TypeIcon,
+    title: "Оружия",
+    description: "Оружия, которые существуют в игре.",
+    href: "/dictionaries/weapons",
+    icon: Sword,
     color: "text-red-600 dark:text-red-400",
   },
     {
-    title: "Профессиональные игроки",
-    description: "Профессиональные игроки, участвующие в турнирах. Например: s1mple, ZywOo, NiKo, и т.д.",
-    href: "/dictionaries/professional_players",
-    icon: User,
+    title: "Стикеры",
+    description: "Стикеры профессиональные игроков (и не только), участвующие в турнирах. Например: s1mple, ZywOo, NiKo, и т.д.",
+    href: "/dictionaries/stickers",
+    icon: Sticker,
     color: "text-red-600 dark:text-red-400",
   },
     {
-    title: "Команды",
-    description: "Профессиональные команды, участвующие в турнирах. Например: Natus Vincere, G2 Esports, FaZe Clan, и т.д.",
-    href: "/dictionaries/teams",
-    icon: Users,
+    title: "Цены",
+    description: "Изменение цен на предметы в разные периоды времени.",
+    href: "/dictionaries/prices",
+    icon: DollarSign,
     color: "text-purple-600 dark:text-purple-400",
   },
 ]
@@ -75,10 +75,9 @@ export default function DictionaryHub() {
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-10 z-10">
         <div className="container px-8 py-6">
           <div className="text-center">
-            <h1 className="text-4xl text-start font-bold text-foreground mb-2 text-balance">Роутинг по простым сущностям</h1>
+            <h1 className="text-4xl text-start font-bold text-foreground mb-2 text-balance">Основные таблицы</h1>
             <p className="text-lg text-start text-muted-foreground text-pretty max-w-2xl ">
-              Простые справочники, которые можно использовать в различных частях административной панели для обеспечения
-              согласованности данных и улучшения пользовательского опыта.
+              Основные сущности и их атрибуты, которые используются в системе для управления данными и конфигурациями.
             </p>
           </div>
         </div>
@@ -95,7 +94,7 @@ export default function DictionaryHub() {
                 href={dictionary.href}
                 className="group block transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
               >
-                <Card className="h-full border-2 transition-all duration-200 hover:border-primary/50 hover:shadow-lg group-focus:border-primary/50 group-focus:shadow-lg">
+                <Card className="h-full border-1 border-popover transition-all duration-200 hover:border-primary/50 hover:shadow-lg group-focus:border-primary/50 group-focus:shadow-lg">
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-3 mb-2">
                       <div className={`p-2 rounded-lg bg-muted ${dictionary.color}`}>

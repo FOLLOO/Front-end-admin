@@ -16,16 +16,16 @@ export const siteConfig = {
     },
     {
       title: "Сущности",
-      href: "/services",
+      href: "/main_tables",
     },
     {
       title: "Другие проеткы или (Профиль)",
-      href: "/cases",
+      href: "/user",
     },
   ],
   links: {
     // twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    github: "https://github.com/FOLLOO/Front-end-admin",
     docs: "https://ui.shadcn.com",
     server: "https://ui.shadcn.com",
     bot: "https://ui.shadcn.com",
@@ -33,3 +33,24 @@ export const siteConfig = {
     mySQL: "https://ui.shadcn.com",
   },
 }
+
+export const dictionaries = {
+    degree_of_wear: "Степени износа",
+    collections: "Коллекции",
+    rarity: "Редкости",
+    type_of_objects: "Типы объектов",
+    type_of_weapons: "Типы оружий",
+    tournaments: "Турниры",
+    type_of_materials: "Типы материалов",
+    pro_players: "Профессиональные игроки",
+    teams: "Команды",
+    inventories: "Инвентари",
+    inventory_items: "Предметы в инвентаре",
+    items: "Предметы",
+    containers: "Кейсы",
+    agents: "Агенты",
+    weapons: "Оружия",
+    stickers: "Стикеры",
+    prices: "Цены",
+}
+
