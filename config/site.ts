@@ -49,6 +49,7 @@ export const dictionaries = {
     items: "Предметы",
     containers: "Кейсы",
     agents: "Агенты",
+    agency: "Агенты",
     weapons: "Оружия",
     stickers: "Стикеры",
     prices: "Цены",
