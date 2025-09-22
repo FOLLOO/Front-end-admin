@@ -72,11 +72,13 @@ export default function DictionaryHub() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-card/50 backdrop-blur-sm sticky top-10 z-10">
-        <div className="container px-8 py-6">
-          <div className="text-center">
-            <h1 className="text-4xl text-start font-bold text-foreground mb-2 text-balance">Основные таблицы</h1>
-            <p className="text-lg text-start text-muted-foreground text-pretty max-w-2xl ">
+      <header className="border-b bg-card/50 backdrop-blur-sm ">
+        <div className="container mx-auto px-4 sm:px-8 lg:px-8 py-4 sm:py-6">
+          <div className="text-left sm:text-center">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2 text-balance">
+              Основные таблицы
+            </h1>
+            <p className="text-base sm:text-lg text-muted-foreground text-pretty max-w-none sm:max-w-2xl sm:mx-auto">
               Основные сущности и их атрибуты, которые используются в системе для управления данными и конфигурациями.
             </p>
           </div>

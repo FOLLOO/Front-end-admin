@@ -6,8 +6,10 @@ import {Table, TableCell, TableBody, TableCaption, TableHead, TableHeader, Table
 
 import { dictionaries } from '../../../config/site'
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { Dictionaries } from '@/bin/fetchRequests/getDictionaries';
+import Link from 'next/link';
+import { Pen, Sword } from 'lucide-react';
 
 
 export default function Page() {
@@ -58,15 +60,29 @@ export default function Page() {
 
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
+      <header className="flex gap-4 flex-col border-b bg-card/50 backdrop-blur-sm sticky top-16 z-10 py-2">
+        <div className="flex w-full justify-between gap-2 ">
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
               {(dictionaries as any)[pathname.split('/')[2]]} <br className="hidden sm:inline" />
-      </h1>
-      <div className="flex w-full max-w-sm items-center gap-2">
-        <Input type="search" placeholder="Поиск" onChange={(e) => onChange(e)} value={inputValue}/>
-        <Button type="submit" variant="default" onClick={handleClick}>
-          Найти
-        </Button>
-      </div>
+          </h1>
+          <Link
+            key={'create'}
+            href={pathname + '/create'}
+            target="_blank"
+            rel="noreferrer"
+            className={buttonVariants()}
+            >
+          Создать новую запись
+          <Pen/>
+        </Link>
+        </div>
+          <div className="flex w-full max-w-sm items-center gap-2">
+            <Input type="search" placeholder="Поиск" onChange={(e) => onChange(e)} value={inputValue}/>
+            <Button type="submit" variant="default" onClick={handleClick}>
+              Найти
+            </Button>
+          </div>
+      </header>
 
       <Table>
         <TableHeader>

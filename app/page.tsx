@@ -29,7 +29,7 @@ export default function IndexPage() {
             <li>- визуализация данных через графики и таблицы  </li>
           </ul>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           {Object.keys(siteConfig.links).map((key, index ) => (
             <Link
               key={key}
